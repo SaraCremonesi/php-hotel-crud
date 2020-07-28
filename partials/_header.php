@@ -1,4 +1,4 @@
-<?php include __DIR__ . 'env.php'; ?>
+<?php include __DIR__ . '/../env.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

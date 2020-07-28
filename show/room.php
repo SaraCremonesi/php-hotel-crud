@@ -25,6 +25,6 @@
       </li>
     </ul>
   </main>
-<?php } else { ?>
-  <span>Stanza inesistente</span>
-<?php } ?>
+<?php } else {
+  die('Stanza inesistente');
+} ?>
