@@ -1,0 +1,19 @@
+header {
+  height: 110px;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border-spacing: 5px;
+  text-align: left;
+  thead {
+    background-color: blue;
+    th {
+      color: #fff;
+      padding: 5px 10px;
+    }
+  }
