@@ -1,5 +1,5 @@
 <?php include __DIR__ . '/server.php'; ?>
-<?php include __DIR__ . '/../partials/header.php'; ?>
+<?php include __DIR__ . '/../partials/_header.php'; ?>
 
 <?php if (!empty($this_room)) { ?>
   <main>

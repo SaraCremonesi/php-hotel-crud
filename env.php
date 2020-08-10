@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost";
-  $username =  "root";
-  $password = "root";
+  $username =  "boolean";
+  $password = "boolean";
   $db_name = "boolean-hotel";
 
-  $base_path = "http://localhost:8888/php-hotel-crud"; 
+  $base_path = "http://localhost:80/php-hotel-crud";
 ?>

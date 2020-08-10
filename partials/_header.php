@@ -8,5 +8,9 @@
   </head>
   <body>
     <header>
+      <div class="navigation">
+        <a href="<?php echo $base_path; ?>">Indietro</a>
+      </div>
+      
       <h1>HOTEL BOOLEAN</h1>
     </header>

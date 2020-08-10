@@ -7,3 +7,11 @@ header {
   align-items: center;
 }
 
+header .navigation {
+  padding-right: 20px;
+}
+
+td {
+  text-align: center;
+}
+

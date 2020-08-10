@@ -1,8 +1,8 @@
 <?php
 
-include __DIR__ . 'database.php';
+include __DIR__ . '/database.php';
 
-  $sql = "SELECT * FROM 'stanze'";
+  $sql = "SELECT * FROM stanze";
   $results = $conn->query($sql);
 
   if($results && $results->num_rows > 0) {
@@ -10,11 +10,10 @@ include __DIR__ . 'database.php';
     // Creo una variabile row
     while ($row = $results->fetch_assoc()) {
       $rooms[] = $row;
-      die();
     }
   } elseif($results) {
     $rooms = 0;
-  } else() {
+  } else {
     die('Errore');
   }
 
