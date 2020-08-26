@@ -10,8 +10,11 @@
   $result = $conn->query($sql);
 
   if ($result) {
-    header('Location: ' . $base_path . '?upd-room=' . $room_number);
-  } else {
-    die('Query error');
+    die('Aggiornamento non riuscito');
   }
+?>
+
+<?php
+  include __DIR__ . '/../partials/_header.php';
+  header('Location: ' . $base_path . '?upd-room=' . $room_number);
 ?>

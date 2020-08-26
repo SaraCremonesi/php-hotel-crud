@@ -5,13 +5,12 @@
   $sql = "DELETE FROM 'stanze' WHERE 'id' = $room_id";
   $result = $conn->query($sql);
 
-  if (!$result) {
+  if ($result) {
     die('Cancellazione non riuscita');
   }
 ?>
 
-<?php include __DIR__ . '/partials/_header.php'; ?>
-
-<main>
-  <p>Eliminazione avvenuta con successo</p>
-</main>
+<?php
+  include __DIR__ . '/../partials/_header.php';
+  header('Location: ' . $base_path . '?deleted-room=' . $room_number);
+?>

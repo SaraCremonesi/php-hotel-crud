@@ -1,9 +1,14 @@
-<?php include __DIR__ . '/server.php'; ?>
-<?php include __DIR__ . '/partials/_header.php'; ?>
+<?php include __DIR__ . '\update\server.php'; ?>
+<?php include __DIR__ . '\partials\_header.php'; ?>
+<?php include __DIR__ . '\database.php'; ?>
 
     <main>
       <?php if (isset($_GET['upd-room'])) { ?>
         <p>Stanza numero <?php echo $_GET['upd-room']; ?> aggiornata con successo</p>
+      <?php } ?>
+
+      <?php if (isset($_GET['deleted-room'])) { ?>
+        <p>Stanza numero <?php echo $_GET['deleted-room']; ?> eliminata con successo</p>
       <?php } ?>
 
       <table>

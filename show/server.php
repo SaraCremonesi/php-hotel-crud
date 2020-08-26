@@ -8,10 +8,10 @@
   $results = $conn->query($sql);
 
   if($results && $results->num_rows > 0) {
-    $this_room = $results->fetch_assoc();
+    $room = $results->fetch_assoc();
     }
    elseif($results) {
-    $this_room = [];
+    $room = [];
   } else {
     die('Errore');
   }

@@ -1,20 +1,24 @@
 <?php
-  include __DIR__ . '/../database.php';
+include __DIR__ . '/../database.php';
 
-  $room_id = $_GET['id'];
+if ($conn && $conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-  $sql = "SELECT * FROM stanze WHERE id = $room_id";
+$sql = "SELECT * FROM `stanze`";
+$results = $conn->query($sql);
 
-  $results = $conn->query($sql);
+if ($results && $results->num_rows > 0) {
+  $rooms = [];
 
-  if($results && $results->num_rows > 0) {
-    $this_room = $results->fetch_assoc();
-    }
-   elseif($results) {
-    $this_room = [];
-  } else {
-    die('Errore');
+  while($row = $results->fetch_assoc()) {
+    $rooms[] = $row;
   }
 
-  $conn->close();
+} elseif($results) {
+  $rooms = [];
+} else {
+  die('Query error');
+}
+$conn->close();
 ?>
