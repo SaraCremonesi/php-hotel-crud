@@ -12,6 +12,7 @@
     <div>
       <label>Modifica numero letti</label>
       <input type="text" name="room_beds" value="<?php echo $room['beds']; ?>">
+      <input type="hidden" name="room_number" value="<?php echo $room['room_number']; ?>">
     </div>
     <div>
       <input type="submit" value="Salva">

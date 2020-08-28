@@ -1,12 +1,13 @@
 <?php
   include __DIR__ . '/../database.php';
 
-  $room_id = $_POST['form_id'];
-  $sql = "DELETE FROM 'stanze' WHERE 'id' = $room_id";
+  $room_id = $_POST['id'];
+  $room_number = $_POST['room_number'];
+  $sql = "DELETE FROM stanze WHERE id = $room_id";
   $result = $conn->query($sql);
 
-  if ($result) {
-    die('Cancellazione non riuscita');
+  if (!$result) {
+      die('Errore durante la cancellazione');
   }
 ?>
 

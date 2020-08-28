@@ -35,9 +35,10 @@
               <a href="<?php echo $base_path . '/show/room.php?id=' . $room['id']; ?>">Vai</a>
               <a href="<?php echo $base_path . '/update/edit.php?id=' . $room['id']; ?>">Aggiorna</a>
 
-              <form action="<?php echo $base_path . '/delete/delete.php?id=' . $room['id']; ?>" method="post">
-                <input type="hidden" name="form_id" value="<?php echo $room['id']; ?>">
-                <input type="submit" value="Delete">
+              <form action="<?php echo $base_path . '/delete/delete.php' ?>" method="post">
+                <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+                <input type="hidden" name="room_number" value="<?php echo $room['room_number']; ?>">
+                <input type="submit" value="Cancella">
               </form>
             </td>
           </tr>
